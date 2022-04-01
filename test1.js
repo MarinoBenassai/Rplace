@@ -5,7 +5,7 @@ import fs from "graceful-fs";
 async function download(add, id) {
   const response = await fetch(add);
   const aBuffer = await response.arrayBuffer();
-  fs.writeFile(`./image${id}.jpg`, Buffer.from(aBuffer), () => {});
+  fs.writeFile(`./img/image${id}.jpg`, Buffer.from(aBuffer), () => {});
 }
 
 async function run() {
